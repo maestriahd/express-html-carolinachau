@@ -12,7 +12,7 @@ var bodyParser = require('body-parser');
 // en el directorio `routes`
 var index = require('./routes/index');
 var users = require('./routes/users');
-var gatos = require('./routes/gato');
+var sobre = require('./routes/sobre');
 var objetivos = require ('./routes/objetivos');
 // **** PARA AGREGAR UNA NUEVA RUTA  ****
 // descomente y cambie los valores de la siguiente línea
@@ -41,8 +41,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ejecuta el codigo de JS cuando es llamado desde una URL por el cliente
 app.use('/', index);
 app.use('/hola', users);
-app.use('/gatos', gatos);
-app.use('/objetivos',objetivos);
+app.use('/sobre', sobre);
+app.use('/objetivos', objetivos);
 // **** PARA AGREGAR UNA NUEVA RUTA  ****
 // descomente y cambie los valores de la siguiente línea
 // app.use('/DONDE?', NOMBRE_RUTA);
